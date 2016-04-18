@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.6in]{geometry}
+\usepackage{amsmath}
+\title{Ph 224 Problem Set 1}
+\author{Alex Zahn}
+\date{4/18/2016}
+
+
+\newcommand{\av}[1]{\left\langle #1 \right\rangle}
+
+\begin{document}
+
+\maketitle
+
+\section{Spherical Dust Thermalization}
+
+\subsection*{A}
+
+If the hydrogen has a maxwellian velocity distribution \(f(v_H)\),
+
+\begin{align*}
+\av{v_H}=\int_0^\infty v_Hf(v_H)dv= \left( \frac{m_H}{2\pi kT}\right)^{2/3}4\pi\int_0^\infty v_H^3 e^{-m_Hv_H^2/2kT}
+\end{align*}
+
+If we change variables to \(x=m_Hv_H^2/2kT\),
+
+\begin{align*}
+\av{v_H} &= \left( \frac{m_H}{2\pi kT}\right)^{2/3}4\pi\int_0^\infty \left(\frac{2kTx}{m_H}\right)^{3/2}e^{-x}\frac{kT}{m}\sqrt{\frac{m_H}{2kTx}}dx \\[12pt]
+&= \sqrt{\frac{8kT}{\pi m_H}}\int_0^\infty xe^{-x}\\[12pt]
+&=  \sqrt{\frac{8kT}{\pi m_H}}
+\end{align*}
+
+\subsection*{B}
+
+A given dust grain presents a collision cross section \(\pi a^2\) to hydrogen atoms, if we assume the hydrogens to be point particles. The hydrogen collision rate per single dust grain then is \(n_H \av{v_H}\pi a^2\), and we need \(m_H/M\) collisions. Reasoning this way, we have \(\tau_m = m_H/\pi M n_H\av{v_H}a^2\).
+
+We've ignored the dust grain velocity \(\av{v_d}\), since we know that it will be largest at thermal equilibrium, and that \( \av{v_d}_{eq} =  \sqrt{8kT/\pi M} \ll \av{v_H} \)
+
+\subsection*{C}
+
+\subsection*{D}
+
+We could start by estimating an upper bound for the rate of kinetic energy gain. Suppose the hydrogen atoms all conspired to always collide with a dust grain along the same direction. We would have
+
+\[ \frac{dE}{dt} = \frac{dE}{dp}\frac{dp}{dt} = \frac{p}{M}(n_H\av{v_H}\pi a^2 )(m_H \av{v_H})
+\]
+
+\end{document}

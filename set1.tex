@@ -33,17 +33,60 @@ If we change variables to \(x=m_Hv_H^2/2kT\),
 
 \subsection*{B}
 
-A given dust grain presents a collision cross section \(\pi a^2\) to hydrogen atoms, if we assume the hydrogens to be point particles. The hydrogen collision rate per single dust grain then is \(n_H \av{v_H}\pi a^2\), and we need \(m_H/M\) collisions. Reasoning this way, we have \(\tau_m = m_H/\pi M n_H\av{v_H}a^2\).
+A given dust grain presents a collision cross section \(\pi a^2\) to hydrogen atoms, if we assume the hydrogens to be point particles. The hydrogen collision rate per single dust grain then is \(n_H \av{v_H+v_d}\pi a^2 \approx n_H \av{v_H}\pi a^2\), and we need \(M/m_H\) collisions. Reasoning this way, we have \(\tau_m = M/\pi m_H n_H\av{v_H}a^2\).
 
 We've ignored the dust grain velocity \(\av{v_d}\), since we know that it will be largest at thermal equilibrium, and that \( \av{v_d}_{eq} =  \sqrt{8kT/\pi M} \ll \av{v_H} \)
 
 \subsection*{C}
 
+We have 
+\begin{align*}
+M &= (4/3)\pi a^3 \rho = 1.26 \times 10^{-7} \,\mathrm{kg}\\
+\av{v_H} &= 1.5 \times 10^3 \, \mathrm{m}/\mathrm{s}\\
+\tau_M = 
+\end{align*}
+
 \subsection*{D}
 
-We could start by estimating an upper bound for the rate of kinetic energy gain. Suppose the hydrogen atoms all conspired to always collide with a dust grain along the same direction. We would have
+We could start by estimating an upper bound for the rate of kinetic energy gain. Since we expect the dust's \(dE/dt\) to fall as it approaches thermal equilibrium with the hydrogen, it's reasonable to guess that \(dE/dt\) is largest at low energy. Let's take the very first hydrogen collision as representative of the low energy limit. The momentum picked up by the grain from this collision is \(m_H \av{v_H}\), with an energy gain of \(m_H^2\av{v_H}^2/2M\). The collision rate is \(\pi a^2 n_H \av{v_H}\), so we could say
 
-\[ \frac{dE}{dt} = \frac{dE}{dp}\frac{dp}{dt} = \frac{p}{M}(n_H\av{v_H}\pi a^2 )(m_H \av{v_H})
-\]
+\begin{align*}
+\left(\frac{dE}{dt}\right)_0 &\approx \frac{1}{2M}\pi m_H^2 n_H a ^2 \av{v_H}^3 \\
+&= \frac{\pi m_H^2 a^2 n_H}{2M}\left( \frac{8kT}{\pi m_H}\right)^{3/2}
+\end{align*}
+
+\subsection*{E}
+
+I think this calculation is more intuitive if worked in terms of \(\av{v_H}\). Noting \( kT = \pi m\av{v_H}^2/8 \), 
+
+\begin{align*}
+\tau_E &= \frac{3\pi m_H \av{v_H}^2/16}{  \pi m_H^2 a^2 n_H \av{v_H}^3/ 2M} \\[12pt]
+&= \frac{3M}{8m_Hn_Ha^2\av{v_H}}
+\end{align*}
+
+Right away we can see that \(\tau_E = (3\pi/8)\tau_m \approx 1.18 \tau_m\).
+
+\subsection*{F}
+
+\subsection*{G}
+
+The simplest effect to consider is what happens when the masses of the dust and gas are comparable.
+
+It's no longer valid to say that collisions transfer all of their momentum to the dust grain. If the particles collide elastically, in the absence of internal degrees of freedom,
+
+\begin{align*}
+p' &= \frac{p(1-m_H/M)+2p_H}{M+m_H} \\[11pt]
+\end{align*}
+
+This doesn't actually recover our approximation in the \(m_H \ll M\) and \(p \ll p_H\) regime that we've been using, yielding instead \(\Delta p \approx 2p_H/M \). So this isn't likely in the spirit of the problem, but it does motivate that momentum and energy transfer will have to look very different than before, and our zeroth order approximation formulas for \(\tau_m\) and \(\tau_E\) should look correspondingly different.
+
+
+\section{}
+
+These molecules essentially differ only by their reduced masses. In atomic mass units, the carbon-12 version has, \(\mu_{12} = 7.034\). For the carbon-13 version, \(\mu_{13} = 7.17\)
+
+\subsection*{a}
+
+Rotational energy levels go with \(1/I \propto 1/\mu\).  
 
 \end{document}
